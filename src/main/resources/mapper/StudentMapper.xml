@@ -18,4 +18,21 @@
         </where>
     </select>
 
+    <insert id="saveStudent" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO students (name, age, address)
+        VALUES (#{name}, #{age}, #{address})
+    </insert>
+
+    <update id="updateStudent">
+        UPDATE students
+        SET name = #{name}, age = #{age}, address = #{address}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteStudent">
+        DELETE FROM students
+        WHERE id = #{id}
+    </delete>
+
+
 </mapper>
