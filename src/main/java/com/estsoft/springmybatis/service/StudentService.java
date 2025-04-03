@@ -30,7 +30,7 @@ public class StudentService {
         return studentMapper.updateStudent(students);
     }
 
-    public int deleteStudent(Students students) {
+    public int deleteStudent(Integer students) {
         return studentMapper.deleteStudent(students);
     }
 }
